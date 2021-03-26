@@ -1,0 +1,3 @@
+import basic_get_stock_basic
+
+basic_get_stock_basic.get_data_from_tushare()
