@@ -30,3 +30,15 @@ class TushareTradeCal(models.Model):
     cal_date  = models.CharField(max_length=100,null=True,blank=True)
     is_open	  = models.CharField(max_length=100,null=True,blank=True)
     pretrade_date	= models.CharField(max_length=100,null=True,blank=True)
+
+class TushareNameChange(models.Model):
+    class Meta:
+        #managed = False
+        db_table = 'tushare_name_change'
+    id        = models.CharField(max_length=100,primary_key=True)
+    ts_code   = models.CharField(max_length=100,null=True,blank=True)
+    name      = models.CharField(max_length=100,null=True,blank=True)
+    start_date	  = models.CharField(max_length=100,null=True,blank=True)
+    end_date	  = models.CharField(max_length=100,null=True,blank=True)
+    ann_date	  = models.CharField(max_length=100,null=True,blank=True)
+    change_reason = models.CharField(max_length=500,null=True,blank=True)
