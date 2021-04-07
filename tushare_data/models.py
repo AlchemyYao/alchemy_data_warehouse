@@ -42,3 +42,21 @@ class TushareNameChange(models.Model):
     end_date	  = models.CharField(max_length=100,null=True,blank=True)
     ann_date	  = models.CharField(max_length=100,null=True,blank=True)
     change_reason = models.CharField(max_length=500,null=True,blank=True)
+
+class TushareDaily(models.Model):
+    class Meta:
+        #managed = False
+        db_table = 'tushare_daily'
+    id        = models.CharField(max_length=100,primary_key=True)
+    ts_code	  = models.CharField(max_length=100,null=True,blank=True)
+    trade_date	= models.CharField(max_length=100,null=True,blank=True)
+    open	= models.CharField(max_length=100,null=True,blank=True)
+    high	= models.CharField(max_length=100,null=True,blank=True)
+    low	    = models.CharField(max_length=100,null=True,blank=True)
+    close	= models.CharField(max_length=100,null=True,blank=True)
+    pre_close	= models.CharField(max_length=100,null=True,blank=True)
+    change	= models.CharField(max_length=100,null=True,blank=True)
+    pct_chg	= models.CharField(max_length=100,null=True,blank=True)
+    vol	    = models.CharField(max_length=100,null=True,blank=True)
+    amount	= models.CharField(max_length=100,null=True,blank=True)
+    
